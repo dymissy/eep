@@ -1,68 +1,41 @@
 EEP
 ---
+This is a fork from [mugoweb/eep](https://github.com/mugoweb/eep).
 
-EEP is a command line tool to support developers using ezpublish
 
-Usage
------
+## Usage:
 
-To set the ezpublish instance used with eep and list some content
-classes for future modifications:
+Before to start, you need to register your eZ Publish installation:
 
+    cd /path/to/ezpublis_legacy
     eep use ezroot .
-    eep list contentclasses
+    
 
-To create a new content object and fill it with random data:
+### Create a new Content Class
 
-    eep use contentclass <class identifier>
-    eep use contentnode <parent node id>
-    eep create content anObject
+* List of content classes
 
-For help:
+		eep list contentclasses
+	
+* Create a new content class
 
-    eep help
-    eep <module> help
-    eep help <module>
+		eep contentclass createclass <DisplayClassName> <Group>
+		eep contentclass createclassuse  News Content
 
-### Modules
-This is the list of modules (more or less up to date):
-* attribute
-* contentclass
-* contentclassgroup
-* contentnode
-* contentobject
-* create
-* crondaemon
-* ezfind
-* help
-* knowledgebase
-* list
-* section
-* test
-* trash
-* use
+* List attributes of a content class
 
-Installation
-------------
-Plug-and-play installation style:
+		eep contentclass listattributes <class identifier>
 
-1. copy the eep repository to your server
-2. set a terminal path alias for the eep command
-3. execute "eep use ezroot ." for each ezpublish instance you want to use
-4. enjoy
+* Set the class as container 
 
-Author & Licensing
-------------------
-* Author = "Mugo Web"
-* Copyright = "Copyright © 2012  Mugo Web"
-* License = "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"
+		eep contentclass setiscontainer <class identifier> <0|1>
 
-Contributing
-------------
-Want to contribute? Great! To contribute to the mugoweb eep repo:
+* Add a new attribute to the content class
 
-1. Fork it.
-2. Create a branch (`git checkout -b eep_NewFeature`)
-3. Commit your changes (`git commit -am "Can now list ezpublish installations"`)
-4. Push to the branch (`git push origin eep_NewFeature`)
-5. Submit a Pull Request to mugoweb for your branch
+		eep attribute newattributexml #dumps the xml
+		eep attribute update <class identifier> <path to xml file>
+
+* Set the string used to name the instances of the class
+
+		eep contentclass setclassobjectidentifier <class identifier> <object naming string or pattern>
+
