@@ -62,3 +62,14 @@ Before to start, you need to register your eZ Publish installation:
 
 		eep contentclass setclassobjectidentifier <class identifier> <object naming string or pattern>
 
+### Create Dummy Content
+
+You can create dummy content for each content class. 
+
+	eep use contentclass <class identifier>
+	eep use contentnode <parent node id>
+	eep create content random
+
+Loop: 
+
+	for i in {1..10}; do eep create content random; echo $i; done
