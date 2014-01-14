@@ -73,3 +73,11 @@ You can create dummy content for each content class.
 Loop: 
 
 	for i in {1..10}; do eep create content random; echo $i; done
+
+Attributes currently supported:
+
+* ezkeyword
+* ezstring
+* eztext
+* ezdatetime
+* ezxmltext
