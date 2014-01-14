@@ -9,7 +9,7 @@ This is a fork from [mugoweb/eep](https://github.com/mugoweb/eep).
 * contentclassgroup*
 * contentnode
 * contentobject
-* create
+* create*
 * crondaemon
 * ezfind
 * help*
