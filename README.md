@@ -4,20 +4,20 @@ This is a fork from [mugoweb/eep](https://github.com/mugoweb/eep).
 
 ## Commands:
 
-* attribute*
-* contentclass*
-* contentclassgroup*
+* attribute
+* contentclass
+* contentclassgroup
 * contentnode
 * contentobject
-* create*
+* create
 * crondaemon
 * ezfind
-* help*
-* knowledgebase*
-* list*
-* section*
-* trash*
-* use*
+* help
+* knowledgebase
+* list
+* section
+* trash
+* use
 
 
 ## Usage:
